@@ -1,0 +1,34 @@
+body {
+  width: 650px;
+  margin: 0 auto;
+}
+
+.container-letters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-letter {
+  width: 48px;
+  height: 48px;
+  border: 1px solid black;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 48px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  padding: 8px;
+}
+
+#word {
+  flex-grow: 1;
+  margin-right: 8px;
+}
