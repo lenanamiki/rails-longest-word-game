@@ -1,21 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
 body {
   width: 650px;
   margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .container-letters {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 16px 0;
 }
 
 .card-letter {
   width: 48px;
   height: 48px;
-  border: 1px solid black;
-  border-radius: 8px;
+  border: 1px solid #c1ac8b;
+  box-shadow: 2px 2px 2px 2px rgba(193, 172, 139, 0.2);
+  border-radius: 4px;
   text-align: center;
   line-height: 48px;
+  background-color: #ead2ad;
+  font-weight: 500;
+}
+
+h1, h3 {
+  margin: 32px 0;
+  text-align: center;
+}
+
+p {
+  margin: 8px 0;
 }
 
 form {
@@ -31,4 +47,10 @@ input {
 #word {
   flex-grow: 1;
   margin-right: 8px;
+}
+
+.btn {
+  background-color: #4188e0;
+  color: #ededed;
+  padding: 8px 16px;
 }

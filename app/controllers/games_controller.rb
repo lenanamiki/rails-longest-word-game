@@ -12,7 +12,8 @@ class GamesController < ApplicationController
   end
 
   def score
-    @word = params[:word].upcase.split('')
+    @input = params[:word].upcase
+    @word = @input.split('')
     @letters = params[:letters].split(' ')
 
     url = "https://wagon-dictionary.herokuapp.com/#{params[:word]}"
@@ -24,9 +25,9 @@ class GamesController < ApplicationController
           @letters.include?(letter)
           @letters.count(letter) >= @word.count(letter)
         end
-        @valid ? "Congratulation! #{params[:word].upcase} is a valid English word!" : "Sorry... #{params[:word].upcase} can't be built from the given letters."
+        @valid ? "Congratulation! #{@input} is a valid English word!" : "Sorry... #{@input} can't be built from the given letters."
       else
-        "Sorry... #{params[:word].upcase} does not seem to be a valid English word."
+        "Sorry... #{@input} does not seem to be a valid English word."
       end
   end
 end
